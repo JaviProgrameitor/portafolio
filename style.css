@@ -1,0 +1,742 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-1: #002930;
+  --color-2: #f8f0af;
+  --color-3: #f60c49;
+  --color-4: #c0ceaa;
+  --font-1: 'Merriweather', serif;
+  --font-2: 'Fredoka', sans-serif;
+  --font-3: 'Rajdhani', sans-serif;
+}
+
+body {
+  background-color: var(--color-1);
+}
+
+/* -------- NAVBAR -------- */
+
+.navbar {
+  background-color: var(--color-2);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+/* CAJA LOGO */
+
+.navbar .caja-logo {
+  height: 100%;
+  margin-left: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .caja-logo img {
+  height: 50px;
+}
+
+/* CAJA NAVBAR */
+
+.navbar .caja-navbar {
+  height: 100%;
+}
+
+.navbar .caja-navbar ul {
+  height: 100%;
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .caja-navbar ul li {
+  margin-left: 40px;
+  display: inline-block;
+  list-style: none;
+}
+
+.navbar .caja-navbar ul li a {
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: var(--font-2);
+  position: relative;
+
+  color: black;
+  text-decoration: none;
+
+  scroll-behavior: smooth;
+
+  transition: 1s;
+}
+
+.navbar .caja-navbar ul li a::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: red;
+
+  transition: .8s;
+}
+
+.navbar .caja-navbar ul li a:hover::before {
+  content: '';
+  width: 100%;
+  left: 0;
+}
+
+.navbar .caja-navbar ul li a:hover {
+  color: var(--color-3);
+}
+
+/* -------- NAVBAR -------- */
+
+
+/* -------- SECTION -------- */
+
+/* CONTENEDOR PRINCIPAL */
+
+.section {
+  width: 100%;
+}
+
+.section .contenedor-principal {
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.section .contenedor-principal video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.section .contenedor-principal h1 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-family: var(--font-1);
+}
+
+.section .contenedor-principal span {
+  color: white;
+  font-size: 35px;
+  font-family: var(--font-1);
+  letter-spacing: 10px;
+}
+
+/* CONTENEDOR SOBRE MI */
+
+.section .contenedor-sobre-mi {
+  width: 100%;
+  margin: 90px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section .contenedor-sobre-mi .caja-subtitulo-sobre-mi {
+  width: 80%;
+}
+
+.section .contenedor-sobre-mi .caja-subtitulo-sobre-mi h2 {
+  color: var(--color-3);
+  font-size: 35px;
+  font-family: var(--font-1);
+  letter-spacing: 5px;
+}
+
+.section .contenedor-sobre-mi .caja-sobre-mi {
+  width: 100%;
+  display: flex;
+}
+
+.section .contenedor-sobre-mi .caja-sobre-mi .caja-imagen-sobre-mi {
+  width: 50%;
+}
+
+.section .contenedor-sobre-mi .caja-sobre-mi .caja-imagen-sobre-mi img {
+  width: 90%;
+}
+
+.section .contenedor-sobre-mi .caja-sobre-mi .caja-informacion-sobre-mi {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.section .contenedor-sobre-mi .caja-sobre-mi .caja-informacion-sobre-mi span {
+  color: white;
+  font-size: 18px;
+  font-family: var(--font-2);
+}
+
+/* CONTENEDOR TECNOLOGIAS */
+
+.section .contenedor-tecnologias {
+  width: 100%;
+  background-color: var(--color-4);
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section .contenedor-tecnologias .caja-subtitulo-tecnologias {
+  width: 80%;
+}
+
+.section .contenedor-tecnologias .caja-subtitulo-tecnologias h2 {
+  color: var(--color-3);
+  margin-bottom: 35px;
+  font-size: 35px;
+  font-family: var(--font-1);
+  letter-spacing: 5px;
+}
+
+.section .contenedor-tecnologias .caja-tecnologias {
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section .contenedor-tecnologias .caja-tecnologias .img-tec {
+  max-width: 200px;
+}
+
+.section .contenedor-tecnologias .caja-tecnologias .img-tec img {
+  width: 100%;
+
+  transform: scale(.2);
+  animation-name: imagenesTamaño;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes imagenesTamaño {
+  0% {
+    transform: scale(.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* CONTENEDOR PORTAFOLIO MOCKUP */
+
+.section .contenedor-portafolio-mockup {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section .contenedor-portafolio-mockup .subtitulo {
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.section .contenedor-portafolio-mockup .subtitulo h2 {
+  color: var(--color-3);
+  font-size: 35px;
+  font-family: var(--font-1);
+  letter-spacing: 5px;
+}
+
+.section .contenedor-portafolio-mockup .caja-portafolio-mockup {
+  width: 80%;
+  background-color: #fce7d2;
+  border-radius: 5px;
+}
+
+.section .contenedor-portafolio-mockup .caja-portafolio-mockup .texto-portafolio-mockup {
+  margin: 10px 0 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section .contenedor-portafolio-mockup .caja-portafolio-mockup .texto-portafolio-mockup span {
+  font-size: 22px;
+  font-family: var(--font-2);
+}
+
+.section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes .imagen-mockup {
+  width: 50%;
+  margin: 25px 0 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes .imagen-mockup img {
+  height: 210px;
+}
+
+/* CONTENEDOR PROYECTOS */
+
+.section .contenedor-proyectos {
+  width: 100%;
+  margin: 90px 0;
+  background-color: var(--color-4);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section .contenedor-proyectos .caja-subtitulo-proyectos {
+  width: 80%;
+  margin: 35px 0 0 0;
+}
+
+.section .contenedor-proyectos .caja-subtitulo-proyectos h2 {
+  color: var(--color-3);
+  font-size: 35px;
+  font-family: var(--font-1);
+  letter-spacing: 5px;
+}
+
+.section .contenedor-proyectos .caja-proyectos {
+  width: 80%;
+  margin: 35px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto {
+  width: 50%;
+  box-sizing: border-box;
+  border: 1px solid var(--color-1);
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto .img-proyecto {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto .img-proyecto img {
+  width: 100%;
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto .img-proyecto .enlace-proyectos {
+  background-color: var(--color-3);
+  color: white;
+  border-radius: 15px;
+  padding: 10px;
+  display: none;
+  text-decoration: none;
+
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto .nombre-proyecto {
+  font-family: var(--font-2);
+  text-align: center;
+  margin: 5px 0;
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto .informacion {
+  display: none;
+  transition: .3s;
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto .informacion .texto-proyecto {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-3);
+  margin: 5px 0;
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto .informacion .tec-utilizadas {
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.section .contenedor-proyectos .caja-proyectos .proyecto .informacion .tec-utilizadas .tec {
+  width: 25px;
+  margin: 0 5px;
+}
+
+/* -------- SECTION -------- */
+
+
+@media (max-width: 500px) {
+
+  /* -------- NAVBAR -------- */
+  
+  .navbar {
+    justify-content: center;
+  }
+
+  /* CAJA LOGO */
+
+  .navbar .caja-logo {
+    margin: 0;
+  }
+
+  /* CAJA NAVBAR */
+
+  .navbar .caja-navbar {
+    display: none;
+  }
+
+  /* -------- SECTION -------- */
+
+  /* CONTENEDOR PRINCIPAL */
+
+  .section .contenedor-principal h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .section .contenedor-principal span {
+    font-size: 12px;
+    margin: 0 8px;
+    text-align: center;
+  }
+
+  /* CONTENEDOR SOBRE MI */
+
+  .section .contenedor-sobre-mi {
+    margin: 50px 0;
+  }
+
+  .section .contenedor-sobre-mi .caja-subtitulo-sobre-mi {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section .contenedor-sobre-mi .caja-subtitulo-sobre-mi h2 {
+    font-size: 28px;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-imagen-sobre-mi {
+    width: 80%;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-imagen-sobre-mi img {
+    width: 95%;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-informacion-sobre-mi {
+    width: 80%;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-informacion-sobre-mi span {
+    margin-bottom: 8px;
+  }
+
+  /* CONTENEDOR TECNOLOGIAS */
+
+  .section .contenedor-tecnologias .caja-subtitulo-tecnologias {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section .contenedor-tecnologias .caja-subtitulo-tecnologias h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .section .contenedor-tecnologias .caja-tecnologias .img-tec {
+    max-width: 160px;
+    margin: 30px 15px 30px 15px;
+  }
+
+  /* CONTENEDOR PORTAFOLIO MOCKUP */
+
+  .section .contenedor-portafolio-mockup .subtitulo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section .contenedor-portafolio-mockup .subtitulo h2 {
+    font-size: 28px;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .texto-portafolio-mockup span {
+    font-size: 17px;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes {
+    justify-content: center;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes .imagen-mockup {
+    width: 100%;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes .imagen-mockup img {
+    height: 120px;
+  }
+
+  /* CONTENEDOR PROYECTOS */
+
+  .section .contenedor-proyectos .caja-subtitulo-proyectos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section .contenedor-proyectos .caja-subtitulo-proyectos h2 {
+    font-size: 28px;
+  }
+
+  .section .contenedor-proyectos .caja-proyectos {
+    justify-content: center;
+  }
+
+  .section .contenedor-proyectos .caja-proyectos .proyecto {
+    width: 80%
+  }
+
+  .section .contenedor-proyectos .caja-proyectos .proyecto .img-proyecto .enlace-proyectos {
+    font-size: 12px;
+    border-radius: 15px;
+    padding: 4px;
+  
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 730px) {
+
+  /* -------- NAVBAR -------- */
+  
+  .navbar {
+    justify-content: center;
+  }
+
+  /* CAJA LOGO */
+
+  .navbar .caja-logo {
+    margin: 0;
+  }
+
+  /* CAJA NAVBAR */
+
+  .navbar .caja-navbar {
+    display: none;
+  }
+
+  /* -------- SECTION -------- */
+
+  /* CONTENEDOR PRINCIPAL */
+
+  .section .contenedor-principal h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+
+  .section .contenedor-principal span {
+    font-size: 20px;
+    margin: 0 8px;
+    text-align: center;
+  }
+
+  /* CONTENEDOR SOBRE MI */
+
+  .section .contenedor-sobre-mi {
+    margin: 50px 0;
+  }
+
+  .section .contenedor-sobre-mi .caja-subtitulo-sobre-mi {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section .contenedor-sobre-mi .caja-subtitulo-sobre-mi h2 {
+    font-size: 30px;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-imagen-sobre-mi {
+    width: 80%;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-imagen-sobre-mi img {
+    width: 95%;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-informacion-sobre-mi {
+    width: 80%;
+  }
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-informacion-sobre-mi span {
+    margin-bottom: 8px;
+  }
+
+  /* CONTENEDOR TECNOLOGIAS */
+
+  .section .contenedor-tecnologias .caja-subtitulo-tecnologias {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section .contenedor-tecnologias .caja-subtitulo-tecnologias h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  .section .contenedor-tecnologias .caja-tecnologias .img-tec {
+    max-width: 160px;
+    margin: 30px 15px 30px 15px;
+  }
+
+  /* CONTENEDOR PORTAFOLIO MOCKUP */
+
+  .section .contenedor-portafolio-mockup .subtitulo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section .contenedor-portafolio-mockup .subtitulo h2 {
+    font-size: 30px;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .texto-portafolio-mockup span {
+    font-size: 17px;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes {
+    justify-content: center;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes .imagen-mockup {
+    width: 100%;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes .imagen-mockup img {
+    height: 180px;
+  }
+
+  /* CONTENEDOR PROYECTOS */
+
+  .section .contenedor-proyectos .caja-subtitulo-proyectos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section .contenedor-proyectos .caja-subtitulo-proyectos h2 {
+    font-size: 30px;
+  }
+
+  .section .contenedor-proyectos .caja-proyectos {
+    justify-content: center;
+  }
+
+  .section .contenedor-proyectos .caja-proyectos .proyecto {
+    width: 80%
+  }
+
+  .section .contenedor-proyectos .caja-proyectos .proyecto .img-proyecto .enlace-proyectos {
+    font-size: 12px;
+    border-radius: 15px;
+    padding: 7px;
+  
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 731px) and (max-width: 990px) {
+
+  /* CONTENEDOR PRINCIPAL */
+
+  .section .contenedor-principal h1 {
+    margin-bottom: 10px;
+  }
+
+  .section .contenedor-principal span {
+    font-size: 18px;
+    margin: 0 8px;
+    text-align: center;
+  }
+
+  /* CONTENEDOR SOBRE MI */
+
+  .section .contenedor-sobre-mi .caja-sobre-mi .caja-informacion-sobre-mi span {
+    font-size: 15px;
+    margin-right: 25px;
+    margin-bottom: 8px;
+  }
+  
+  /* CONTENEDOR PORTAFOLIO MOCKUP */
+
+  .section .contenedor-portafolio-mockup .subtitulo {
+    display: flex;
+  }
+
+  .section .contenedor-portafolio-mockup .subtitulo h2 {
+    font-size: 35px;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .texto-portafolio-mockup span {
+    font-size: 22px;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes {
+    justify-content: center;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes .imagen-mockup {
+    width: 100%;
+  }
+
+  .section .contenedor-portafolio-mockup .caja-portafolio-mockup .imagenes .imagen-mockup img {
+    height: 250px;
+  }
+
+    /* CONTENEDOR PROYECTOS */
+
+  .section .contenedor-proyectos .caja-proyectos .proyecto .img-proyecto .enlace-proyectos {
+    font-size: 12px;
+    border-radius: 15px;
+    padding: 5px;
+  
+    right: 10px;
+    bottom: 10px;
+  }
+}
